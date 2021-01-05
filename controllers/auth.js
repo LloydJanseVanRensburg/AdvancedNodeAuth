@@ -59,7 +59,7 @@ exports.forgotPassword = async (req, res, next) => {
     const user = await User.findOne({ email });
 
     if (!user) {
-      return next(new ErrorResponse("No user found with that email", 404));
+      return next(new ErrorResponse("No email could not be sent", 404));
     }
 
     // Reset Token Gen and add to database hashed (private) version of token
@@ -68,9 +68,7 @@ exports.forgotPassword = async (req, res, next) => {
     await user.save();
 
     // Create reset url to email to provided email
-    const resetUrl = `${req.protocol}://${req.get(
-      "host"
-    )}/api/auth/passwordreset/${resetToken}`;
+    const resetUrl = `http://localhost:3000/passwordreset/${resetToken}`;
 
     // HTML Message
     const message = `
@@ -126,7 +124,11 @@ exports.resetPassword = async (req, res, next) => {
 
     await user.save();
 
-    sendToken(user, 200, res);
+    res.status(201).json({
+      success: true,
+      data: "Password Updated Success",
+      token: user.getSignedJwtToken(),
+    });
   } catch (err) {
     next(err);
   }

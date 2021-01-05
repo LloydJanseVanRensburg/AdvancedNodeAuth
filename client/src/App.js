@@ -25,7 +25,7 @@ const App = () => {
           />
           <Route
             exact
-            path="/resetpassword/:resetToken"
+            path="/passwordreset/:resetToken"
             component={ResetPasswordScreen}
           />
         </Switch>
