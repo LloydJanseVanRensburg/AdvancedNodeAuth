@@ -55,6 +55,7 @@ const LoginScreen = ({ history }) => {
             placeholder="Email address"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
+            tabIndex={1}
           />
         </div>
         <div className="form-group">
@@ -72,6 +73,7 @@ const LoginScreen = ({ history }) => {
             placeholder="Enter password"
             onChange={(e) => setPassword(e.target.value)}
             value={password}
+            tabIndex={2}
           />
         </div>
         <button type="submit" className="btn btn-primary">
