@@ -1,9 +1,13 @@
-# Simple User Registration and Login functionality with MERN stack.
+# Simple Authentification System (include password reset) with MERN stack : 
+
+https://user-images.githubusercontent.com/44909504/132927245-b17f7dae-7dc5-4678-9a32-392dc9b1557d.mp4
+
+MERN APP for registering users with mongodb and authentication using a JWT (json web token), It includes also a password reset functionality.
 
 
 
 # Configuration :
-- Create a ```config.env``` file in the root directory and fill it with the following informations :
+Create a ```config.env``` file in the root directory and fill it with the following informations :
 
 ```
 PORT=5000
@@ -33,4 +37,4 @@ npm run dev
 ```
 
 
-Advanced Node JS Authentication Workflow (include password reset)
+For more details follow the tutorial : https://www.youtube.com/watch?v=h6fOErvWIGI
