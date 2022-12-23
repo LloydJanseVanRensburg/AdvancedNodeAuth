@@ -1,4 +1,4 @@
-# Simple Authentification System (include password reset) with MERN stack : 
+# Simple Authentication System (include password reset) with MERN stack : 
 
 MERN APP for registering users with mongodb and authentication using a JWT (json web token), It includes also a password reset functionality.
 
